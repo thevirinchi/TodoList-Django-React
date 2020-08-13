@@ -60,7 +60,7 @@ import React, { Component } from "react";
       renderItems = () => {
         const { viewCompleted } = this.state;
         const newItems = this.state.todoList.filter(
-          item => item.completed == viewCompleted
+          item => item.completed === viewCompleted
         );
         return newItems.map(item => (
           <li
