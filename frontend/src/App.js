@@ -21,7 +21,7 @@ import React, { Component } from "react";
       refreshList = () => {
         axios
           .get("http://localhost:8000/api/todos/")
-          .then(res => this.setState({ todoList: res.data }))
+          .then(res => {this.setState({todoList: res.data }); console.log(this.state)})
           .catch(err => console.log(err));
       };
       displayCompleted = status => {
